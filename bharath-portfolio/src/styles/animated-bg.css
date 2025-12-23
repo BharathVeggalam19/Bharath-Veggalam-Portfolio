@@ -1,0 +1,29 @@
+.hero-bg {
+  background-image: url('/assets/background.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  margin-top: -80px;
+
+  /* smooth nebula movement animation */
+  animation: spaceDrift 35s ease-in-out infinite alternate,
+             glowPulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes spaceDrift {
+  0% {
+    background-position: center;
+  }
+  100% {
+    background-position: right top;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    filter: brightness(0.9) saturate(1.1);
+  }
+  100% {
+    filter: brightness(1.25) saturate(1.5);
+  }
+}
